@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+coop-trick-taker-venv/
 
 # Spyder project settings
 .spyderproject

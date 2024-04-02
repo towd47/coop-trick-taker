@@ -28,7 +28,7 @@ class Deck:
 
 	def deal_hands(self):
 		hands = array_split(self.deck, self.num_players)
-		return hands
+		return [list(hand) for hand in hands]
 	
 	def deal_goals(self, num_goals):
 		num_goals = min(num_goals, len(self.deck))
@@ -41,6 +41,9 @@ class Deck:
 	
 	def print_hand(hand):
 		print(",".join(str(card) for card in hand))
+	
+	def hand_string(hand):
+		return ",".join(str(card) for card in hand)
 
 class Card:
 	def __init__(self, suit, num):
@@ -51,6 +54,13 @@ class Card:
 		if self.suit == card.suit and self.num == card.num:
 			return True
 		return False
+	
+	def __gt__(self, card):
+		if self.suit == card.suit:
+			return self.num > card.num
+		if card.suit == "T":
+			return False
+		return True
 	
 	def __str__(self):
 		return self.suit + self.num

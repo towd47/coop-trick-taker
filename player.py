@@ -4,6 +4,8 @@ class Player:
         self.position = position
         self.hand = []
         self.goals = []
+        self.communicated = False
+        self.communicated_card = None
 
     def is_captain(self):
         for card in self.hand:
@@ -27,12 +29,13 @@ class Player:
     # def has_suits(self):
     #     return set([card.suit for card in self.hand])
     
-    # def has_suit(self, suit):
-    #     for card in self.hand:
-    #         if card.suit == suit:
-    #             return True
-    #     return False
+    def has_suit(self, suit):
+        for card in self.hand:
+            if card.suit == suit:
+                return True
+        return False
     
-    # def play_card(self, card):
-    #     if not self.is_valid_play()
-    #     self.hand.remove(card)
+    def play_card(self, card):
+        self.hand.remove(card)
+        if self.communicated and card == self.communicated_card:
+            self.communicated_card = None

@@ -59,6 +59,10 @@
             "11": "images/JH.png",
             "12": "images/QH.png",
             "13": "images/KH.png"
+        },
+        "JOKER": {
+            "0": "images/1J.png",
+            "1": "images/2J.png"
         }
     },
     "Back": "images/1B.png"

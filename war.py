@@ -47,7 +47,7 @@ class WarEngine:
 
     def resolve_round(self, player_num):
         for pile in self.piles:
-            self.players[player_num].discard_cards(pile.pop_all())
+            self.players[player_num].discard_cards(pile.get_all())
             pile.clear()
         self.check_for_end()
 

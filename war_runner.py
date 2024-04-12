@@ -58,15 +58,16 @@ def renderGame(window, warEngine):
 		window.blit(text2, (350, 400))
 
 def render_hand(window, hand, height):
-	num_cards = len(hand)
-	
-	spacing = int(800 / max(num_cards, 1))
-	for i, card in enumerate(hand):
-		if card.is_faceup():
-			image = scaleImage(card.image)
-		else:
-			image = card_back
-		window.blit(image, (50 + (spacing * i), height))
+	if hand:
+		num_cards = len(hand)
+		spacing = min(int(800 / max(num_cards, 1)), 40)
+		starting_pos = window.get_width() / 2 - (spacing * num_cards / 2) - hand[0].image.get_width() / 2
+		for i, card in enumerate(hand):
+			if card.is_faceup():
+				image = scaleImage(card.image)
+			else:
+				image = card_back
+			window.blit(image, (max(50, starting_pos) + (spacing * i), height))
 
 def scaleImage(image, scale=CARD_SCALE):
 	return pygame.transform.scale(image, (int(238 * scale), int(332 * scale)))

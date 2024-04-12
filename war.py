@@ -1,7 +1,8 @@
+import pygame
 from enum import Enum
 import random
-from cards import PlayingCardDeck, Pile
-import pygame
+from playing_cards import PlayingCardDeck
+from cards import Pile
 from player import Player
 
 class WarGameState(Enum):

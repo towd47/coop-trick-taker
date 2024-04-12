@@ -1,0 +1,65 @@
+{
+    "Suits": {
+        "CLUBS": {
+            "1": "images/AC.png",
+            "2": "images/2C.png",
+            "3": "images/3C.png",
+            "4": "images/4C.png",
+            "5": "images/5C.png",
+            "6": "images/6C.png",
+            "7": "images/7C.png",
+            "8": "images/8C.png",
+            "9": "images/9C.png",
+            "10": "images/TC.png",
+            "11": "images/JC.png",
+            "12": "images/QC.png",
+            "13": "images/KC.png"
+        },
+        "DIAMONDS": {
+            "1": "images/AD.png",
+            "2": "images/2D.png",
+            "3": "images/3D.png",
+            "4": "images/4D.png",
+            "5": "images/5D.png",
+            "6": "images/6D.png",
+            "7": "images/7D.png",
+            "8": "images/8D.png",
+            "9": "images/9D.png",
+            "10": "images/TD.png",
+            "11": "images/JD.png",
+            "12": "images/QD.png",
+            "13": "images/KD.png"
+        },
+        "SPADES": {
+            "1": "images/AS.png",
+            "2": "images/2S.png",
+            "3": "images/3S.png",
+            "4": "images/4S.png",
+            "5": "images/5S.png",
+            "6": "images/6S.png",
+            "7": "images/7S.png",
+            "8": "images/8S.png",
+            "9": "images/9S.png",
+            "10": "images/TS.png",
+            "11": "images/JS.png",
+            "12": "images/QS.png",
+            "13": "images/KS.png"
+        },
+        "HEARTS": {
+            "1": "images/AH.png",
+            "2": "images/2H.png",
+            "3": "images/3H.png",
+            "4": "images/4H.png",
+            "5": "images/5H.png",
+            "6": "images/6H.png",
+            "7": "images/7H.png",
+            "8": "images/8H.png",
+            "9": "images/9H.png",
+            "10": "images/TH.png",
+            "11": "images/JH.png",
+            "12": "images/QH.png",
+            "13": "images/KH.png"
+        }
+    },
+    "Back": "images/1B.png"
+}

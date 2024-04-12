@@ -1,33 +1,36 @@
-class Player:
-    def __init__(self, name, position):
-        self.name = name
-        self.position = position
-        self.hand = []
-        self.goals = []
-        self.communicated = False
-        self.communicated_card = None
+import random
+from cards import Card
 
-    def is_captain(self):
-        for card in self.hand:
-            if card.is_captain_card():
-                return True
-        return False
-    
+class Player:
+    def __init__(self, name) -> None:
+        self.hand = []
+        self.name = name
+
     def set_hand(self, hand):
         self.hand = hand
 
-    def take_goal(self, goal):
-        self.goals.append(goal)
+    def draw_card(self, card):
+        self.hand.append(card)
     
-    # def is_valid_play(self, card, suit_to_follow):
-    #     if card not in self.hand:
-    #         return False        
-    #     if suit_to_follow and card.suit != suit_to_follow and self.has_suit(suit_to_follow):
-    #         return False
-    #     return True
+    def draw_cards(self, cards):
+        self.hand.extend(cards)
+
+    def play_top_card(self):
+        if self.hand:
+            return self.hand.pop(0)
+        return None
     
-    # def has_suits(self):
-    #     return set([card.suit for card in self.hand])
+    def num_cards(self):
+        return len(self.hand)
+    
+    def sort_hand(self):
+        self.hand.sort()
+    
+    def clear_hand(self):
+        self.hand = []
+
+    def hand_str(self):
+        return " ".join([str(c) for c in self.hand])
     
     def has_suit(self, suit):
         for card in self.hand:
@@ -37,5 +40,5 @@ class Player:
     
     def play_card(self, card):
         self.hand.remove(card)
-        if self.communicated and card == self.communicated_card:
-            self.communicated_card = None
+        return card
+
